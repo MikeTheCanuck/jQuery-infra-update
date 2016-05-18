@@ -1,5 +1,5 @@
 // Unattended-Upgrade::Origins-Pattern controls which packages are
-// upgraded.
+// upgraded. 
 //
 // Lines below have the format format is "keyword=value,...".  A
 // package will be upgraded only if the values in its metadata match
