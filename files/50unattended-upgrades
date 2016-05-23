@@ -1,0 +1,36 @@
+Unattended-Upgrade::Origins-Pattern {
+        // This selection is intended to acquire all updates for the
+        // base OS as well as all security updates
+        "origin=Debian,codename=${distro_codename},label=Debian-Security";
+};
+
+// There are no packages we need to blacklist at this time
+Unattended-Upgrade::Package-Blacklist {
+};
+
+// Enforcing default to ensure we can see what behaviours we're getting
+Unattended-Upgrade::AutoFixInterruptedDpkg "true";
+
+// This is recommended to allow shutdown while upgrading (don't break upgrade)
+Unattended-Upgrade::MinimalSteps "true";
+
+// Enforcing default to ensure we can see what behaviours we're getting
+Unattended-Upgrade::InstallOnShutdown "false";
+
+// No email is desired, so this option remains commented out
+//Unattended-Upgrade::Mail "root";
+
+// No email is desired, so this option remains commented out
+//Unattended-Upgrade::MailOnlyOnError "true";
+
+// 2016-05-22 Still determining whether this is desired
+//Unattended-Upgrade::Remove-Unused-Dependencies "false";
+
+// 2016-05-22 Still determining whether this is desired
+//Unattended-Upgrade::Automatic-Reboot "false";
+
+// 2016-05-22 Still determining whether this is desired
+//Unattended-Upgrade::Automatic-Reboot-Time "now";
+
+// No reason to limit bandwidth at this time, so this option remains commented out
+//Acquire::http::Dl-Limit "70";
