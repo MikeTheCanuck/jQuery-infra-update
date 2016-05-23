@@ -7,4 +7,4 @@
       apt: name=unattended-upgrades update_cache=yes
 
     - name: apply unattended-upgrades config files
-      copy: backup=yes src=./config-files/ dest=/etc/apt/apt.conf.d/
+      copy: backup=yes src=./files/ dest=/etc/apt/apt.conf.d/
